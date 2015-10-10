@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: yes
+---
 
 
 ## Loading and preprocessing the data
@@ -31,7 +36,7 @@ total_steps = by(steps,date,sum)
 hist(total_steps,main="Total number of steps",xlab="Number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
 
 2. *Calculate and report the mean and median total number of steps taken per day*
 
@@ -63,7 +68,7 @@ plot(average_activity,type="l",main="average daily activity",ylab="steps",xlab="
 axis(1, at=0:6*48, labels=names(average_activity)[0:6*48 +1])
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 2. *Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?*
 
@@ -126,7 +131,7 @@ total_steps = by(steps,date,sum)
 hist(total_steps,main="Total number of steps",xlab="Number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 
 The **mean** and **median** total number of steps taken per day for the new dataset:
 
@@ -200,7 +205,7 @@ library(lattice)
 xyplot(dd$steps ~ dd$interval | dd$weekday, type="l", layout=c(1,2), xlab="Interval", ylab="Number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
 
 
 
